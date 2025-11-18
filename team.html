@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, san-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -50,13 +66,9 @@
 
         if (teams[teamId]) {
             document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
-            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamGame").textContent = teams[teamId].game;
+            document.getElementById("teamRank").textContent = teams[teamId].game;
+            document.getElementById("teamDescription").textContent = teams[teamId].game;
         } else {
             document.getElementById("name").textContent = "Team not Found";
             
