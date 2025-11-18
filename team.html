@@ -13,10 +13,56 @@
             <p><strong>Game: </strong><span id="teamGame"></span></p>
             <p><strong>Ranking: </strong><span id="teamRank"></span></p>
             <p><strong>Description: </strong><span id="teamDescription"></span></p>
+        </div> <!-- end of info div -->
+    </div> <!-- end of container div -->
+    <script>
+        // simple JSON data with # keys
+        const teams = {
+            1: {
+                name: "Team Alpha",
+                game: "Valorant",
+                ranking: "#3 Region",
+                description: "A fast-paced tactical team known for aggressive strategies"
+            },
+            2: {
+                name: "Crimson Wolves",
+                game: "Valorant",
+                ranking: "#5 Region",
+                description: "Strong macro play and disciplined rotations define them."
+            },
+            3: {
+                name: "Nebula Squad",
+                game: "Valorant",
+                ranking: "#1 Division",
+                description: "A fast-paced tactical team known for aggressive strategies"
+            },
+            1: {
+                name: "Team Alpha",
+                game: "Valorant",
+                ranking: "#3 Region",
+                description: "A fast-paced tactical team known for aggressive strategies"
+            },
+        }
+
+        // retreive ID from URL (example: index.html?id=3)
+        const urlParams = new URLSearchParams(window.location.search);
+        const teamId = urlParams.get("id");
+
+        if (teams[teamId]) {
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+            document.getElementById("teamName").textContent = teams[teamId].name;
+        } else {
+            document.getElementById("name").textContent = "Team not Found";
+            
+        }
 
 
-
-        </div> <!-- end of class div -->
-    </div>
+    </script>
 </body>
 </html>
