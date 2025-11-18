@@ -140,6 +140,20 @@
         // retreive ID from URL (example: index.html?id=3)
         const urlParams = new URLSearchParams(window.location.search);
         const gameId = urlParams.get("id");
+
+        if (games[gameId]) {
+            document.getElementById("name").textContent = games[gameId].gamename;
+            document.getElementById("team1").textContent = games[gameId].team1;
+            document.getElementById("team2").textContent = games[gameId].team2;
+            document.getElementById("team3").textContent = games[gameId].team3;
+            document.getElementById("team4").textContent = games[gameId].team4;
+            document.getElementById("team5").textContent = games[gameId].team5;
+            document.getElementById("team6").textContent = games[gameId].team6;
+            document.getElementById("team7").textContent = games[gameId].team7;
+            document.getElementById("team8").textContent = games[gameId].team8;
+        } else {
+            document.getElementById("teamname")
+        }
     </script>
 </body>
 </html>
