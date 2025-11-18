@@ -34,12 +34,38 @@
             flex-direction: column;
             margin-bottom: 15px;
         }
+
+        a.team {
+            display: block;
+            padding: 10px;
+            background: #e8e8e8;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .team:hover {
+            background: #d4d4d4;
+        }
+
+        @media (min-width: 600px) {
+            .bracket {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .round {
+                width: 30%;
+            }
+        }
     </style>
 </head>
 <body>
     <h1><span id="name"></span></h1> <!-- name of selected game will show up here -->
     <div class="bracket"></div>
-    <!-- round 1 -->
+        <!-- round 1 -->
         <div class="round">
             <h2>Round 1</h2>
                 <div class="match">
@@ -47,52 +73,52 @@
                     <a class="team" href="team.html?id=1"><span id="team2"></span></a>
                 </div>
             <div class="match">
-                
                 <a class="team" href="team.html?id=1"><span id="team3"></span></a>
                 <a class="team" href="team.html?id=1"><span id="team4"></span></a>
-
             </div>
             <div class="match">
-                
                 <a class="team" href="team.html?id=1"><span id="team5"></span></a>
                 <a class="team" href="team.html?id=1"><span id="team6"></span></a>
-
             </div>
             <div class="match">
-                
                 <a class="team" href="team.html?id=1"><span id="team7"></span></a>
                 <a class="team" href="team.html?id=1"><span id="team8"></span></a>
-
             </div>
-    </div>
-
-    <!-- semi finals -->
-    <div class="round">
-        <h2>Semifinalists</h2>
-            <div class="match">
-                <a class="team" href="#">Winner of Match 1</a>
-                <a class="team" href="#">Winner of Match 2</a>
-                <a class="team" href="#">Winner of Match 3</a>
-                <a class="team" href="#">Winner of Match 4</a>
-            </div>
-    </div>
-    <!-- finals -->
+        </div> <!-- end 1st round class -->
+        <!-- semi finals -->
         <div class="round">
-            <h2>Finals</h2>
+            <h2>Semifinalists</h2>
                 <div class="match">
                     <a class="team" href="#">Winner of Match 1</a>
                     <a class="team" href="#">Winner of Match 2</a>
-            </div>
+                    <a class="team" href="#">Winner of Match 3</a>
+                    <a class="team" href="#">Winner of Match 4</a>
+                </div>
+        </div> <!-- end 2nd round class-->
+        <!-- finals -->
+        <div class="round">
+            <h2>Finals</h2>
+            <div class="match">
+            <a class="team" href="#">Winner of Match 1</a>
+            <a class="team" href="#">Winner of Match 2</a>
+        </div>
 
-            <!-- winner -->
-            <div class="round">
-                <h2>Final Match</h2>
-                <div class="match">
-                    <a class="team" href="#">Champion</a>
-            </div>
+        <!-- winner -->
+        <div class="round">
+            <h2>Final Match</h2>
+            <div class="match">
+            <a class="team" href="#">Champion</a>
+        </div> <!-- end 4th round class -->
 
-            </div>
+    </div> <!-- end bracket class -->
 
-     </div>
+    <script>
+        const games = {
+            1: {
+                gamename: "Valorant";
+                team1: "Team Alpha"
+            }
+        }
+    </script>
 </body>
 </html>
