@@ -4,20 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bracket</title>
+
+    <style>
+        body { 
+            font-family: Arial, Helvetica, san-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .bracket {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .round {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0,0.1);
+        }
+
+        .match {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1><span id="name"></span></h1> <!-- name of selected game will show up here -->
     <div class="bracket"></div>
-
     <!-- round 1 -->
-     <div class="round">
-        <h2>Round 1</h2>
-            <div class="match">
-                
-                <a class="team" href="team.html?id=1"><span id="team1"></span></a>
-                <a class="team" href="team.html?id=1"><span id="team2"></span></a>
-
-            </div>
+        <div class="round">
+            <h2>Round 1</h2>
+                <div class="match">
+                    <a class="team" href="team.html?id=1"><span id="team1"></span></a>
+                    <a class="team" href="team.html?id=1"><span id="team2"></span></a>
+                </div>
             <div class="match">
                 
                 <a class="team" href="team.html?id=1"><span id="team3"></span></a>
@@ -36,22 +64,31 @@
                 <a class="team" href="team.html?id=1"><span id="team8"></span></a>
 
             </div>
-            <!-- semi finals -->
-            <div class="round">
-                <h2>Semifinalists</h2>
+    </div>
+
+    <!-- semi finals -->
+    <div class="round">
+        <h2>Semifinalists</h2>
+            <div class="match">
+                <a class="team" href="#">Winner of Match 1</a>
+                <a class="team" href="#">Winner of Match 2</a>
+                <a class="team" href="#">Winner of Match 3</a>
+                <a class="team" href="#">Winner of Match 4</a>
+            </div>
+    </div>
+    <!-- finals -->
+        <div class="round">
+            <h2>Finals</h2>
                 <div class="match">
                     <a class="team" href="#">Winner of Match 1</a>
                     <a class="team" href="#">Winner of Match 2</a>
-                    <a class="team" href="#">Winner of Match 3</a>
-                    <a class="team" href="#">Winner of Match 4</a>
             </div>
 
-                        <!-- finals -->
+            <!-- winner -->
             <div class="round">
-                <h2>Semifinalists</h2>
+                <h2>Final Match</h2>
                 <div class="match">
-                    <a class="team" href="#">Winner of Match 1</a>
-                    <a class="team" href="#">Winner of Match 2</a>
+                    <a class="team" href="#">Champion</a>
             </div>
 
             </div>
