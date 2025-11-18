@@ -112,7 +112,7 @@
 
     </div> <!-- end bracket class -->
 
-    <script>
+    <script> // json script
         const games = {
             1: {
                 gamename: "Valorant",
@@ -135,8 +135,11 @@
                 team6: "Team Legends6",
                 team7: "Team Legends7",
                 team8: "Team Legends8",
-            },
-        }
+            }
+        };
+        // retreive ID from URL (example: index.html?id=3)
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameId = urlParams.get("id");
     </script>
 </body>
 </html>
