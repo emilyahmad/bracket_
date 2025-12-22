@@ -40,7 +40,7 @@
             text-decoration: none;
             color: black;
             text-align: center;
-            transition: background 0.2s;
+            transition: 0.2s ease;
         }
         .team:hover{
             background: #d4d4d4;
@@ -54,6 +54,17 @@
                 width: 30%;
             }
         }
+        #dice {
+            width: 3rem;
+            position: absolute;
+            top: 23%;
+            left: 32%;
+        }
+        #dice:hover {
+            cursor: pointer;
+            border: 2px black dotted;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -62,21 +73,22 @@
         <!-- Round One -->
          <div class="round">
             <h2>Round 1</h2>
+            <img id="dice" src="https://static.vecteezy.com/system/resources/thumbnails/020/575/862/small/3d-icon-illustration-two-floating-dice-png.png">
             <div class="match">
-                <a class="team" href="team.html?id=1"><span id="team1"></span></a>
-                <a class="team" href="team.html?id=2"><span id="team2"></span></a>
+                <a class="team" href="team.html?id=1"><span id="team1">Team Alpha</span></a>
+                <a class="team" href="team.html?id=2"><span id="team2">Crimson Wolves</span></a>
             </div>
             <div class="match">
-                <a class="team" href="team.html?id=3"><span id="team3"></span></a>
-                <a class="team" href="team.html?id=4"><span id="team4"></span></a>
+                <a class="team" href="team.html?id=3"><span id="team3">Nebula Squad</span></a>
+                <a class="team" href="team.html?id=4"><span id="team4">Edgelords</span></a>
             </div>
             <div class="match">
-                <a class="team" href="team.html?id=5"><span id="team5"></span></a>
-                <a class="team" href="team.html?id=6"><span id="team6"></span></a>
+                <a class="team" href="team.html?id=5"><span id="team5">Kanyewestlover911</span></a>
+                <a class="team" href="team.html?id=6"><span id="team6">Shobit Goel</span></a>
             </div>
             <div class="match">
-                <a class="team" href="team.html?id=7"><span id="team7"></span></a>
-                <a class="team" href="team.html?id=8"><span id="team8"></span></a>
+                <a class="team" href="team.html?id=7"><span id="team7">Italian Brainrot</span></a>
+                <a class="team" href="team.html?id=8"><span id="team8">Tun tun Sahurs</span></a>
             </div>
         </div>
     <!-- Semifinals -->
@@ -106,6 +118,29 @@
     </div>
     </div>
     <script>
+        const di = document.getElementById('dice');
+        let round = 1;
+        if (round == 1) {
+            di.addEventListener('click', firstRoll);
+            function firstRoll() {
+            di.src = "https://media.tenor.com/pqLcEORkjWwAAAAM/angry-birds.gif";
+            di.style.width = '12rem';
+            setTimeout(randomRound1, 2000);
+            round++;
+        } else if (round == 2) {
+            
+        }
+
+        function randomRound1() {
+            di.src = "https://static.vecteezy.com/system/resources/thumbnails/020/575/862/small/3d-icon-illustration-two-floating-dice-png.png";
+            di.style.width = '3rem';
+            di.style.top = '88%';
+            di.style.left = '46%';
+        }
+        }
+
+
+
         const games = {
             1: {
                 gamename: "Valorant",
